@@ -1,3 +1,4 @@
+
 name: Deploy WordPress Theme
 
 on:
@@ -13,6 +14,37 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
+      - name: Check secrets presence
+        shell: bash
+        env:
+          WORDPRESS_SSH_KEY: ${{ secrets.WORDPRESS_SSH_KEY }}
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          THEME_PATH: ${{ secrets.THEME_PATH }}
+        run: |
+          if [ -n "$WORDPRESS_SSH_KEY" ]; then
+            echo "WORDPRESS_SSH_KEY found"
+          else
+            echo "WORDPRESS_SSH_KEY missing"
+          fi
+
+          if [ -n "$EC2_HOST" ]; then
+            echo "EC2_HOST found"
+          else
+            echo "EC2_HOST missing"
+          fi
+
+          if [ -n "$EC2_USER" ]; then
+            echo "EC2_USER found"
+          else
+            echo "EC2_USER missing"
+          fi
+
+          if [ -n "$THEME_PATH" ]; then
+            echo "THEME_PATH found"
+          else
+            echo "THEME_PATH missing"
+          fi
       - name: Debug basic environment
         shell: bash
         run: |

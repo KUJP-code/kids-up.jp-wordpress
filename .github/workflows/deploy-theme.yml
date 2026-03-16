@@ -13,29 +13,39 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      - name: Set up SSH key
+      - name: Prepare SSH files
+        shell: bash
         run: |
-          mkdir -p ~/.ssh
-          printf "%s" "${{ secrets.WORDPRESS_SSH_KEY }}" > ~/.ssh/deploy_key
-          chmod 600 ~/.ssh/deploy_key
-          ssh-keyscan -H "${{ secrets.EC2_HOST }}" >> ~/.ssh/known_hosts
+          set -euo pipefail
+          KEY_PATH="$RUNNER_TEMP/deploy_key"
+          KNOWN_HOSTS_PATH="$RUNNER_TEMP/known_hosts"
+
+          printf '%s' "${{ secrets.WORDPRESS_SSH_KEY }}" > "$KEY_PATH"
+          chmod 600 "$KEY_PATH"
+
+          ssh-keyscan -H "${{ secrets.EC2_HOST }}" > "$KNOWN_HOSTS_PATH"
+          chmod 644 "$KNOWN_HOSTS_PATH"
 
       - name: Preview sync
+        shell: bash
         run: |
+          set -euo pipefail
           rsync -avzn \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".DS_Store" \
-            -e "ssh -i ~/.ssh/deploy_key" \
+            -e "ssh -i $RUNNER_TEMP/deploy_key -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts" \
             ./ "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.THEME_PATH }}/"
 
       - name: Deploy theme
+        shell: bash
         run: |
+          set -euo pipefail
           rsync -avz \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".DS_Store" \
-            -e "ssh -i ~/.ssh/deploy_key" \
+            -e "ssh -i $RUNNER_TEMP/deploy_key -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts" \
             ./ "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.THEME_PATH }}/"

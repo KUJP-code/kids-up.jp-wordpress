@@ -11,17 +11,14 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Start SSH agent
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.WORDPRESS_SSH_KEY }}
-
-      - name: Add server to known_hosts
+      - name: Set up SSH key
         run: |
           mkdir -p ~/.ssh
-          ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+          printf "%s" "${{ secrets.WORDPRESS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ secrets.EC2_HOST }}" >> ~/.ssh/known_hosts
 
       - name: Preview sync
         run: |
@@ -30,7 +27,7 @@ jobs:
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".DS_Store" \
-            -e "ssh" \
+            -e "ssh -i ~/.ssh/deploy_key" \
             ./ "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.THEME_PATH }}/"
 
       - name: Deploy theme
@@ -40,5 +37,5 @@ jobs:
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".DS_Store" \
-            -e "ssh" \
+            -e "ssh -i ~/.ssh/deploy_key" \
             ./ "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.THEME_PATH }}/"

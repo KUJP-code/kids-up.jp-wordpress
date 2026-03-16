@@ -13,39 +13,95 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      - name: Prepare SSH files
+      - name: Debug basic environment
         shell: bash
         run: |
-          set -euo pipefail
+          pwd
+          whoami
+          echo "RUNNER_TEMP=$RUNNER_TEMP"
+          ls -la
+          command -v ssh
+          command -v rsync
+
+      - name: Write SSH key
+        shell: bash
+        env:
+          SSH_KEY: ${{ secrets.WORDPRESS_SSH_KEY }}
+        run: |
+          if [ -z "$SSH_KEY" ]; then
+            echo "WORDPRESS_SSH_KEY secret is empty or missing"
+            exit 1
+          fi
+
           KEY_PATH="$RUNNER_TEMP/deploy_key"
-          KNOWN_HOSTS_PATH="$RUNNER_TEMP/known_hosts"
-
-          printf '%s' "${{ secrets.WORDPRESS_SSH_KEY }}" > "$KEY_PATH"
+          printf '%s\n' "$SSH_KEY" > "$KEY_PATH"
           chmod 600 "$KEY_PATH"
+          ls -l "$KEY_PATH"
 
-          ssh-keyscan -H "${{ secrets.EC2_HOST }}" > "$KNOWN_HOSTS_PATH"
+      - name: Add known host
+        shell: bash
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+        run: |
+          if [ -z "$EC2_HOST" ]; then
+            echo "EC2_HOST secret is empty or missing"
+            exit 1
+          fi
+
+          KNOWN_HOSTS_PATH="$RUNNER_TEMP/known_hosts"
+          ssh-keyscan -H "$EC2_HOST" > "$KNOWN_HOSTS_PATH"
           chmod 644 "$KNOWN_HOSTS_PATH"
+          cat "$KNOWN_HOSTS_PATH"
+
+      - name: Test SSH connection
+        shell: bash
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+        run: |
+          if [ -z "$EC2_USER" ]; then
+            echo "EC2_USER secret is empty or missing"
+            exit 1
+          fi
+
+          ssh \
+            -i "$RUNNER_TEMP/deploy_key" \
+            -o UserKnownHostsFile="$RUNNER_TEMP/known_hosts" \
+            -o StrictHostKeyChecking=yes \
+            "$EC2_USER@$EC2_HOST" \
+            "echo SSH_OK && whoami"
 
       - name: Preview sync
         shell: bash
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          THEME_PATH: ${{ secrets.THEME_PATH }}
         run: |
-          set -euo pipefail
+          if [ -z "$THEME_PATH" ]; then
+            echo "THEME_PATH secret is empty or missing"
+            exit 1
+          fi
+
           rsync -avzn \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".DS_Store" \
-            -e "ssh -i $RUNNER_TEMP/deploy_key -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts" \
-            ./ "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.THEME_PATH }}/"
+            -e "ssh -i $RUNNER_TEMP/deploy_key -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts -o StrictHostKeyChecking=yes" \
+            ./ "$EC2_USER@$EC2_HOST:$THEME_PATH/"
 
       - name: Deploy theme
         shell: bash
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          THEME_PATH: ${{ secrets.THEME_PATH }}
         run: |
-          set -euo pipefail
           rsync -avz \
             --exclude=".git/" \
             --exclude=".github/" \
             --exclude="node_modules/" \
             --exclude=".DS_Store" \
-            -e "ssh -i $RUNNER_TEMP/deploy_key -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts" \
-            ./ "${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:${{ secrets.THEME_PATH }}/"
+            -e "ssh -i $RUNNER_TEMP/deploy_key -o UserKnownHostsFile=$RUNNER_TEMP/known_hosts -o StrictHostKeyChecking=yes" \
+            ./ "$EC2_USER@$EC2_HOST:$THEME_PATH/"

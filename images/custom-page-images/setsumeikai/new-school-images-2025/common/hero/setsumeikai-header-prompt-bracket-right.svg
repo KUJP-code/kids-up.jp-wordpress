@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_4_copy" data-name="Layer 4 copy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.44 86.34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f18523;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <path class="cls-1" d="M29.18,86.34H4.26c-2.35,0-4.26-1.93-4.26-4.32h0c0-2.38,1.91-4.32,4.26-4.32h20.65s0-69.08,0-69.08H4.26C1.91,8.63,0,6.7,0,4.32H0C0,1.93,1.91,0,4.26,0h24.92c2.35,0,4.26,1.93,4.26,4.32v77.71c0,2.38-1.91,4.32-4.26,4.32Z"/>
+</svg>

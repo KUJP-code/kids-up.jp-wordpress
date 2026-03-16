@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="376" height="107" viewBox="0 0 376 107">
+  <g id="グループ_935" data-name="グループ 935" transform="translate(-150 -1938)">
+    <g id="長方形_166" data-name="長方形 166" transform="translate(150 1938)" fill="#5a534a" stroke="#fff" stroke-width="3">
+      <rect width="376" height="107" rx="10" stroke="none"/>
+      <rect x="1.5" y="1.5" width="373" height="104" rx="8.5" fill="none"/>
+    </g>
+    <text id="全校本部運営校" transform="translate(411 1998)" fill="#fff" font-size="17" font-family="HiraginoSans-W6, Hiragino Sans"><tspan x="-59.5" y="0">全校本部運営校</tspan></text>
+    <g id="features-08-07" transform="translate(144.26 1878.88)">
+      <line id="線_21" data-name="線 21" x2="73.452" transform="translate(57.74 143.059)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="パス_50" data-name="パス 50" d="M133.227,108.049,94.693,82.12,57.74,108.049h9.493v35.01h54.919v-35.01Z" transform="translate(0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="パス_51" data-name="パス 51" d="M144.853,190.314c12.2-5.4,18.924-15.412,13.879-22.611-3.526-5.03-10.934-3.729-13.879,0-2.945-3.729-10.352-5.03-13.879,0C125.926,174.9,132.656,184.911,144.853,190.314Z" transform="translate(-50.199 -57.732)" fill="#ef8200"/>
+    </g>
+  </g>
+</svg>

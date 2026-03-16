@@ -1,0 +1,95 @@
+#imageList {
+  padding: 0;
+}
+#imageList li {
+  list-style: none;
+  margin-bottom: 0.5em;
+}
+#imageList li .op-icon i {
+  vertical-align: middle;
+  padding: 10px 0;
+  cursor: pointer;
+
+}
+#imageList li .op-icon i.fa-plus-circle {
+  color: #3C8DBC;
+}
+#imageList li .op-icon i.fa-times {
+  color: #DD4B39;
+}
+#imageList li .op-icon i.fa-plus-circle:hover {
+  opacity: 0.8;
+}
+
+
+/*
+  event.index
+  event.create
+*/
+.products-list-event .product-info {
+  margin-left: 0;
+}
+.products-list-event .product-info .date {
+  margin-right: 10px;
+}
+.select2-container--default .select2-selection--multiple,
+.select2-container--default.select2-container--focus .select2-selection--multiple {
+  padding-left: 6px!important;
+  padding-right: 6px!important;
+}
+.input-group-timezone {
+  margin-bottom: 15px;
+}
+.fc table {
+  border-left: 1px solid #d2d6de !important;
+  border-right: 1px solid #d2d6de !important;
+}
+.fc-highlight {
+  background: none !important;
+}
+td.fc-day {
+  cursor: pointer;
+}
+td.selected {
+  background: #f39c12 !important;
+}
+
+.form-control {
+  width: 100%;
+}
+
+#affixNav {
+  width: 100%;
+}
+.affix {
+  position: static !important;
+}
+
+@media screen and (min-width: 992px) {
+  #affixNav {
+    width: 260px;
+  }
+  #affixContent {
+    float: right;
+    width: calc(100% - 260px);
+    min-height: 478px;
+  }
+  .affix {
+    position: fixed !important;
+  }
+}
+table.booking-list th {
+  background: #eee;
+}
+table.booking-list td.message {
+  text-align: center;
+}
+.modal {
+  height: 100vh;
+}
+.modal-dialog {
+  margin: 100px auto;
+}
+.modal-header .close {
+  margin-top: -10px;
+}

@@ -1,0 +1,762 @@
+@use "setsumeikai.scss";
+
+
+// -----------------------------
+// Page CTA Buttons
+// -----------------------------
+
+.cta-button{
+  text-decoration: none;
+  background-color: setsumeikai.$kidsup-light-gray;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+
+}
+
+.cta-primary{
+  font-size: 1.5rem;
+  font-family: setsumeikai.$font-shinmaru-heavy;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  border-radius: 3rem;
+
+  .arrow{
+    margin-left: 3rem;
+    width: 1.6rem;
+    height: auto;
+    fill: currentColor;
+    stroke-miterlimit: 1;
+    stroke: currentColor;
+    stroke-width: 70px;
+    overflow: visible;
+  }
+
+}
+
+.cta-secondary{
+  font-size: 1.25rem;
+  font-family: setsumeikai.$font-shinmaru-debold;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+  border-radius: 3rem;
+
+
+    .arrow{
+    margin-left: 2rem;
+    width: 1.35rem;
+    height: auto;
+    fill: currentColor;
+    stroke-width: 35px;
+    overflow: visible;
+  }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+  .cta-button{
+    width: 100%;
+    max-width: 350px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .arrow{
+      margin-left: unset;
+    }
+  }
+
+
+  .cta-primary{
+  font-size: 1.3rem;
+  width: fit-content;
+  
+  .arrow{
+  width: 1.4rem;
+  }
+
+
+
+  .cta-secondary{
+  font-size: 1.15rem;
+  .arrow{
+  width: 1.25rem;
+  }
+
+}
+}
+}
+
+
+
+// -----------------------------
+// NEW SCHOOL 
+// -----------------------------
+
+// Optional: Helper mixin for text-stroke to keep the main code clean
+@mixin text-stroke($size, $color) {
+  -webkit-text-stroke: $size $color;
+  paint-order: stroke fill;
+}
+
+.hero-new-school {
+  // Layout
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+
+
+  
+  // Height Logic
+  min-height: 770px;
+  height: 100vh;
+  max-height: 1200px;
+
+  // Background
+  background: {
+    image: url('/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/desktop-hero-bg-top.png');
+    position: top right;
+    repeat: no-repeat;
+    size: auto 100%;
+  }
+
+  // --- Child Elements ---
+
+  .mobile-image{
+    display: none;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 5%; // Replaces the conflicting auto/5% logic
+    position: relative;
+    height: fit-content;
+
+    h1 {
+      width: fit-content;
+      margin-right: auto;
+      font-family: setsumeikai.$font-noto-sans;
+      font-size: 5rem;
+      font-weight: bolder;
+      color: setsumeikai.$kidsup-off-black;
+      position: relative;
+
+
+      .open-date-desktop, .open-date-mobile{
+        position: absolute;
+        transform: translate(1rem, -50%);
+        left: 24rem;
+        top: 3rem;
+        height: 4.75rem;
+      }
+
+      .open-date-mobile{
+        display: none;
+      }
+
+
+      .orange {
+        color: setsumeikai.$kidsup-orange-primary;
+        @include text-stroke(0.1rem, setsumeikai.$kidsup-orange-primary);
+      }
+    }
+
+    h3 {
+      width: fit-content;
+      margin-right: auto;
+      font-family: setsumeikai.$font-noto-sans;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      color: setsumeikai.$kidsup-light-gray;
+      @include text-stroke(0.025rem, setsumeikai.$kidsup-light-gray);
+    }
+
+    .image-info-btn-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 550px; // Use max-width for responsiveness
+
+      img {
+        display: block;
+        width: 100%; // Fill the wrapper
+        padding-top: 1rem;
+      }
+
+      h2 {
+        width: fit-content;
+        margin: 0 auto; // Centers the element
+        padding-top: 1rem;
+        text-align: center;
+        font-family: setsumeikai.$font-noto-sans;
+        font-size: 1.5rem;
+        font-weight: bolder;
+        color: setsumeikai.$kidsup-orange-primary;
+        padding-bottom: 1rem;
+        @include text-stroke(0.025rem, setsumeikai.$kidsup-orange-primary);
+      }
+
+      .cta-primary {
+        // Layout
+        margin: auto; // If this is flex/grid child
+        padding: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+        border: solid 0.15rem white;
+        
+        // Visuals
+        background: linear-gradient(135deg, rgba(252, 180, 75, 1) 0%, rgba(234, 129, 36, 1) 100%);
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background: linear-gradient(135deg, rgb(75, 190, 252) 0%, rgb(84, 154, 228) 100%);
+        }
+      }
+    }
+  }
+
+  .hero-badge {
+    position: absolute;
+    bottom: 2rem;
+    left: calc(100% + 2rem);
+    bottom: 0;
+    width: 44.5%;
+    max-width: 470px;
+  }
+
+  // --- Media Queries ---
+  
+  // Large Tablets / Small Desktops
+  @media (max-width: 1199.98px) {
+    min-height: 720px;
+    max-height: 1000px;
+    background-size: auto 95%;
+    background-position: right center;
+
+    .hero-text {
+      h1 { font-size: 4rem; 
+    
+    .open-date-desktop, .open-date-mobile{
+        left: 19rem;
+        top: 2.5rem;
+        height: 4rem;
+      }
+    }
+      h3 { font-size: 1rem; }
+
+      .image-info-btn-wrapper {
+        max-width: 450px; 
+        // Note: No need to repeat img width, h2 styles, or cta styles here. 
+        // They inherit correctly from above.
+      }
+    }
+  }
+  // Large Tablets
+  @media (max-width: 991.98px) {
+
+    background-size: auto 90%;
+    min-height: 660px;
+    max-height: 700px;
+
+    .hero-text {
+      h1 { font-size: 3rem;    @include text-stroke(0.05rem, setsumeikai.$kidsup-off-black)
+        ;
+    .orange{
+        @include text-stroke(0.05rem, setsumeikai.$kidsup-orange-primary);
+    }
+
+        .open-date-desktop, .open-date-mobile{
+        left: 14rem;
+        top: 2rem;
+        height: 3rem;
+      }
+    }
+      h3 { font-size: 1rem; }
+      h2 { font-size: 1rem; } 
+
+    .image-info-btn-wrapper {
+        max-width: 400px; 
+        // Note: No need to repeat img width, h2 styles, or cta styles here. 
+        // They inherit correctly from above.
+      }
+    }
+  }
+
+    // Small Tablets
+  @media (max-width: 767.98px) {
+
+    background-size: 50% auto;
+    min-height: 10px;
+    max-height: 650px;
+
+    .hero-text {
+        width: 50%;
+        min-width: 360px;
+    
+      h1 { font-size: 3rem;    @include text-stroke(0.05rem, setsumeikai.$kidsup-off-black);
+    .orange{
+        @include text-stroke(0.05rem, setsumeikai.$kidsup-orange-primary);
+    }
+
+            .open-date-desktop, .open-date-mobile{
+
+        top: 1.8rem;
+        height: 2.75rem;
+      }
+    }
+      h3 { font-size: 1rem; }
+      h2 { font-size: 1rem; } 
+
+    .image-info-btn-wrapper {
+        max-width: 400px; 
+        // Note: No need to repeat img width, h2 styles, or cta styles here. 
+        // They inherit correctly from above.
+      }
+    }
+  }
+    // Smartphones
+  @media (max-width: 576.98px) {
+    background: unset;
+    max-height: unset;
+    min-height: unset;
+    height: fit-content;
+    flex-direction: column;
+
+    .mobile-image{
+        display: block;
+        position: relative;
+        margin-bottom: 2rem;
+       
+        .mobile-splash{
+            width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .mobile-badge{
+            position: absolute;
+            width: 45%;
+            z-index: 2;
+            left: 60%;
+            bottom: -2rem;
+        }
+
+    }
+
+    .hero-text{
+        width: 100%;
+        text-align: center;
+        margin-left: unset;
+        margin-right: unset;
+
+        h1, h3{
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1{
+            .date-wrapper{
+                padding-right: 90px;
+            }
+            
+            .open-date-desktop{
+                display: none;
+            }
+
+            .open-date-mobile{
+                display: block;
+                height: 3.5rem;
+                top: 1.5rem;
+            }
+        }
+        .image-info-btn-wrapper{
+            margin: unset;
+            display: flex;
+            flex-direction: column;
+            max-width: unset;
+             width: 100%;
+  
+             padding-bottom: 1rem;
+
+            img{
+                display: none;
+               
+            }
+            h2{
+                font-size: 1.25rem;
+                width: fit-content;
+                margin-left: auto;
+                margin-left: auto;
+            }
+
+            .cta-button{
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    .hero-badge{
+        display: none;
+    }
+  }
+}
+
+
+// -----------------------------
+// NEW SCHOOL SUB HERO
+// -----------------------------
+
+
+.sub-hero-new-school{
+
+    overflow-x: hidden;
+
+    background-image: 
+        url(/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/new-school-hero-mask.svg), /* Layer 1: Top (New Image) */
+        url(/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/desktop-sub-hero-bg.png); /* Layer 2: Bottom (Existing) */
+
+    background-position: 
+        bottom center, /* Position for Top Image */
+        left bottom;   /* Position for Bottom Image (Original was 'left') */
+
+    background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+        auto 100%;   /* Size for Bottom Image */
+
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+
+    width: 100%;
+    height: fit-content;
+    max-height: 920px;
+    position: relative;
+
+
+    
+    .sub-hero-inner{
+        padding-left: clamp(850px, 40vw, 900px);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+        padding-top: 2rem;
+        padding-bottom: 10vw;
+        
+        
+
+    h3{
+        font-family: setsumeikai.$font-noto-sans;
+        color: setsumeikai.$kidsup-dark-gray;
+        font-weight: bolder;
+    }
+
+    h5{
+        font-family: setsumeikai.$font-noto-sans;
+        color: setsumeikai.$kidsup-dark-gray;
+        font-weight: bolder;
+        margin-left: 1.5rem;
+
+    }
+
+    .small-1{
+        font-family: setsumeikai.$font-noto-sans;
+        color: setsumeikai.$kidsup-orange-primary;
+        font-weight: bolder;
+        margin-left: 2rem;
+    }
+
+    .small-2{
+        color: setsumeikai.$kidsup-orange-primary;
+        margin-left: 5.5rem;
+        
+        width: 70%;
+    }
+
+    .small-3{
+        color: setsumeikai.$kidsup-orange-primary;
+        margin-left: 6.5rem;
+        width: 70%;
+                font-weight: bolder;
+    }
+
+    h6{
+        font-family: setsumeikai.$font-noto-sans;
+        color: setsumeikai.$kidsup-orange-primary;
+        font-weight: bolder;
+        margin-left: 3.5rem;
+        width: 70%;
+      
+    }
+    }
+
+    .h6-2{
+        padding-left: 6.5rem;
+        font-size: 1.25rem;
+    }
+  @media (max-width: 1399.98px) {
+
+
+    background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+         auto 80%;   /* Size for Bottom Image */
+
+            .sub-hero-inner{
+          padding-left: clamp(780px, 35vw, 800px);
+    }
+  }
+
+   @media (max-width: 1199.98px) {
+
+        background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+         auto 85%;   /* Size for Bottom Image */
+
+            .sub-hero-inner{
+        padding-left: clamp(680px, 57vw, 650px);
+        
+        h3{
+            font-size: 1.5rem;
+        }
+
+        h5{
+            font-size: 1.2rem;
+        }
+
+        .small-1, .small-2, .small-3{
+            font-size: .8rem;
+        }
+
+        h6{
+            font-size: 1.15rem;
+        }
+
+    }
+   }
+   
+
+
+
+   @media (max-width: 991.98px) {
+
+    background-image: 
+        url(/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/new-school-hero-mask.svg), /* Layer 1: Top (New Image) */
+        url(/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/tablet-sub-hero-bg.webp); /* Layer 2: Bottom (Existing) */
+
+    
+
+        background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+          auto 100%;   /* Size for Bottom Image */
+
+            .sub-hero-inner{
+        padding-left: 30%;
+        width: 95%;
+        
+        h3, h5, h6, .small-1, .small-2, .small-3 {
+            width: unset;
+            
+        }
+
+
+        h3{
+            font-size: 1.5rem;
+        }
+
+        h5{
+            font-size: 1.2rem;
+        }
+
+        .small-1, .small-2, .small-3{
+            font-size: .8rem;
+        }
+
+        h6{
+            font-size: 1.15rem;
+        }
+
+    }
+   }
+
+    @media (max-width: 849.98px) {
+
+        background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+        auto 100%;   /* Size for Bottom Image */
+
+            .sub-hero-inner{
+        padding-left: clamp(200px, 320px, 650px);
+
+        
+        h3, h5, h6, .small-1, .small-2, .small-3 {
+            width: unset;
+            
+        }
+
+
+        h3{
+            font-size: 1.5rem;
+        }
+
+        h5{
+            font-size: 1.1rem;
+        }
+
+        .small-1, .small-2, .small-3{
+            font-size: .8rem;
+        }
+
+        h6{
+            font-size: 1.1rem;
+        }
+
+    }
+   }
+
+   @media (max-width: 768.98px) {
+
+        background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+        auto  clamp(430px, 400px, 472px);
+
+
+            .sub-hero-inner{
+        padding-left: 40%;
+        width: 95%;
+        
+        h3, h5, h6, .small-1, .small-2, .small-3 {
+            width: unset;
+            
+        }
+
+
+        h3{
+            font-size: 1.5rem;
+        }
+
+        h5{
+            font-size: 1.2rem;
+        }
+
+        .small-1, .small-2, .small-3{
+            font-size: .8rem;
+        }
+
+        h6{
+            font-size: 1.15rem;
+        }
+
+    }
+   }
+
+
+   
+
+
+   @media (max-width: 576.98px) {
+
+        overflow-x: hidden;
+
+    background-image: 
+        url(/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/new-school-hero-mask.svg), /* Layer 1: Top (New Image) */
+        url(/wp-content/themes/kidsup/images/custom-page-images/setsumeikai/new-school-images-2025/common/hero/desktop-sub-hero-bg.png); /* Layer 2: Bottom (Existing) */
+
+    background-position: 
+        bottom center, /* Position for Top Image */
+        left bottom;   /* Position for Bottom Image (Original was 'left') */
+
+    background-size: 
+        100% auto, /* Size for Top Image (Full Width) */
+         100% auto;   /* Size for Bottom Image */
+
+    background-repeat: 
+        no-repeat, 
+        no-repeat;
+
+    width: 100%;
+    height: fit-content;
+    max-height: unset;
+    position: relative;
+
+    .sub-hero-inner{
+        width: 90%;
+        padding: unset;
+        margin: unset;
+        margin-left: auto;
+        margin-right: auto;
+
+                h3, h5, h6, .small-1, .small-2, .small-3, .h6-2 {
+            width: unset;
+            margin: unset;
+            padding: unset;
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: fit-content;
+            padding-bottom: .5rem;
+
+            
+        }
+
+
+
+        .h6-2{
+            
+            font-size: 1rem;
+        }
+
+    }
+
+    
+   }
+
+.mobile-subhero-img{
+    display: none;
+
+       @media (max-width: 576.98px) {
+        display: block;
+        aspect-ratio: 36 / 23;
+        width: 100%;
+       }
+}
+    
+}
+
+
+// -----------------------------
+// NEW SCHOOL CTA
+// -----------------------------
+
+.call-to-action{
+    
+.container{
+
+    .maplink{
+        font-family: setsumeikai.$font-noto-sans;
+        color: white;
+
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+}
+
+.temp{
+    height: 300vh;
+}
+

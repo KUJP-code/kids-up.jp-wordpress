@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="376" height="107" viewBox="0 0 376 107">
+  <g id="グループ_939" data-name="グループ 939" transform="translate(-584 -1486)">
+    <g id="長方形_163" data-name="長方形 163" transform="translate(584 1486)" fill="#5a534a" stroke="#fff" stroke-width="3">
+      <rect width="376" height="107" rx="10" stroke="none"/>
+      <rect x="1.5" y="1.5" width="373" height="104" rx="8.5" fill="none"/>
+    </g>
+    <text id="お子様の成長を_リアルタイムに報告" data-name="お子様の成長を
+リアルタイムに報告" transform="translate(838 1534)" fill="#fff" font-size="17" font-family="HiraginoSans-W6, Hiragino Sans"><tspan x="-59.5" y="0">お子様の成長を</tspan><tspan y="0" font-family="NotoSans-Bold, Noto Sans" font-weight="700"></tspan><tspan x="-75.31" y="27">リアルタイムに報告</tspan></text>
+    <g id="features-03" transform="translate(633 1513)">
+      <rect id="長方形_72" data-name="長方形 72" width="83.218" height="52.158" rx="10" transform="translate(0 0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <g id="グループ_19" data-name="グループ 19" transform="translate(12.296 17.191)">
+        <line id="線_13" data-name="線 13" x2="24.357" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="線_14" data-name="線 14" x2="24.357" transform="translate(0 8.887)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <line id="線_15" data-name="線 15" x2="24.357" transform="translate(0 17.774)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+      <g id="グループ_20" data-name="グループ 20" transform="translate(46.566 9.926)">
+        <path id="パス_16" data-name="パス 16" d="M250.848,196.513h-3.065l-2.764,4.566,4.935,8.545a.933.933,0,0,0,1.278.342l1.307-3.494,3.322.821a1.054,1.054,0,0,0,.385-1.435l-5.4-9.347Z" transform="translate(-230.936 -176.516)" fill="#ef8200"/>
+        <path id="パス_17" data-name="パス 17" d="M206.005,196.52l-5.4,9.347a1.049,1.049,0,0,0,.385,1.435l3.682-.821.946,3.494a.94.94,0,0,0,1.279-.342l7.571-13.114h-8.464Z" transform="translate(-200.345 -176.523)" fill="#ef8200"/>
+        <path id="パス_18" data-name="パス 18" d="M212.191,158.041l-1.836-1.5a1.05,1.05,0,0,0-.843-.226l-2.341.385a1.064,1.064,0,0,1-1.166-.674l-.837-2.219a1.053,1.053,0,0,0-.617-.617l-2.219-.837a1.064,1.064,0,0,1-.674-1.166l.385-2.341a1.062,1.062,0,0,0-.226-.843l-1.5-1.836a1.062,1.062,0,0,1,0-1.344l1.5-1.836a1.05,1.05,0,0,0,.226-.843l-.385-2.341a1.064,1.064,0,0,1,.674-1.166l2.219-.837a1.053,1.053,0,0,0,.617-.617l.837-2.219a1.062,1.062,0,0,1,1.166-.674l2.341.385a1.062,1.062,0,0,0,.843-.226l1.836-1.5a1.062,1.062,0,0,1,1.344,0l1.836,1.5a1.05,1.05,0,0,0,.843.226l2.341-.385a1.064,1.064,0,0,1,1.166.674l.837,2.219a1.053,1.053,0,0,0,.617.617l2.219.837a1.064,1.064,0,0,1,.674,1.166l-.385,2.341a1.062,1.062,0,0,0,.226.843l1.5,1.836a1.062,1.062,0,0,1,0,1.344l-1.5,1.836a1.05,1.05,0,0,0-.226.843l.385,2.341a1.064,1.064,0,0,1-.674,1.166l-2.219.837a1.053,1.053,0,0,0-.617.617l-.837,2.219a1.064,1.064,0,0,1-1.166.674l-2.341-.385a1.062,1.062,0,0,0-.843.226l-1.836,1.5A1.062,1.062,0,0,1,212.191,158.041Z" transform="translate(-200.075 -132.705)" fill="#5a534a" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="パス_19" data-name="パス 19" d="M220.407,155.088a6.742,6.742,0,1,1-1.059,3.748,6.74,6.74,0,0,1,1.059-3.748" transform="translate(-213.308 -145.933)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

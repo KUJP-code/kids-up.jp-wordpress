@@ -1,0 +1,27 @@
+input[type='text'],
+input[type='email'],
+input[type='submit'] {
+  height: 50px;
+}
+input[type='submit'] {
+  margin-top: 20px;
+}
+.logo {
+  margin: 10px 0;
+}
+span.label-required {
+    border: 1px solid #f4564e;
+    color: #f4564e;
+    margin-left: 0.5em;
+    border-radius: 0;
+}
+section#selle-form span.glyphicon {
+  color: #29abe0;
+}
+
+
+@media (max-width: 768px) {
+  section#selle-form {
+    padding: 0 10px;
+  }
+}

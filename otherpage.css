@@ -1,0 +1,1555 @@
+@charset "UTF-8";
+
+
+/*
+Theme Name: Kids UP theme
+Theme URI:
+Description:WordPressテーマ「 Kids UP theme」
+Author: Kids UP
+Author URI:https://kids-up.jp/
+Version:1.0
+*/
+
+/* 下層ページ共通 ----------------------------------------------------------------- */
+/* ヘッダー */
+.title-page-header{
+	width: 100%;
+	display: flex;
+	height: auto;
+	margin-top: 80px;
+}
+
+.page-title-wrapper{
+    width: 60%;
+    background: #EF8200;
+    display: table;
+	position: relative;
+    z-index: -2;
+}
+
+.page-title{
+	color: #fff;
+    font-weight: bold;
+    text-align: left;
+	display: table-cell;
+    font-size: 3.3vw;
+    vertical-align: middle;
+    position: relative;
+    z-index: 1;
+    padding-left: 50px;
+	line-height: 1.1;
+}
+
+.page-title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    background: #5A534A;
+    width: 3vw;
+    height: 3vw;
+    z-index: -1;
+}
+
+.page-title2{
+	color: #fff;
+    text-align: left;
+    font-size:2.3vw;
+	margin-bottom: 10px;
+}
+
+.page-img-wrapper{
+    background-size: cover;
+    width: 40%;
+    aspect-ratio: 3 / 2;
+    background-position: center center;
+}
+
+/* 固定ページの内容スタート箇所 */
+.page-contentents-wrapper{
+	width: 100%;
+	
+}
+
+/* 各セクション　余白の設定 */
+.page-contents-section{
+	padding: 5vw 0;
+	position: relative;
+    z-index: 0;
+}
+
+/* 各セクション　背景の設定 */
+.bcg-gray{ 
+	background: rgba(245,245,245,0.3);
+}
+
+.bcg-gray2{ 
+	background: #F5F5F5;
+}
+
+.bcg-gray3{ 
+	background: #E8E8E8;
+}
+
+.bcg-brown{
+	background: #5A534A;
+}
+
+.bcg-orange{
+	background: #EBDCCC;
+}
+
+.bcg-orange2{
+	background: #EF8200;
+}
+
+.bcg-blue1{
+	background: #9FD4D5;
+}
+
+.bcg-green{
+	background: #D6E3A0;
+}
+
+.bcg-purple{
+	background: #C19ECA;
+}
+
+.bcg-purple{
+	background: #C19ECA;
+}
+
+.bcg-yellow{
+	background: #FFF49E;
+}
+
+.bcg-abc{
+	background-image: url("img/course-schedule-back.png");
+	background-size: cover;
+	background-position: center center;
+	background-color: #fff;
+}
+
+/* 各セクション　横幅の設定 */
+.page-contents-inner{
+	width: 100%;
+	max-width: 1080px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+    z-index: 0;
+}
+
+/* 各セクション　タイトル */
+.page-subtitle{
+	font-size: 2.5rem;
+    line-height: 1.3;
+    position: relative;
+    text-align: left;
+    margin: 0 0 60px;
+}
+
+.page-subtitle::before{
+    content: '';
+    position: absolute;
+    border-bottom: 3px solid #EF8200;
+    width: 64px;
+    bottom: -20px;
+}
+
+.page-subtitle2{
+	font-size: 1.6rem;
+    color: #5A534A;
+    line-height: 3;
+}
+
+.page-subtitle3{
+	font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+.page-subtitle4{
+	font-size: 1.6rem;
+    line-height: 1.5;
+	background: #EF8200;
+	width: 100%;
+	padding: 10px 50px;
+}
+
+.page-subtitle5{
+    font-size: 1.2rem;
+    background: #5A534A;
+    width: 100%;
+    padding: 10px 0 10px 30px;
+    display: block;
+    color: #fff;
+    margin: 30px 0 10px;
+}
+
+.page-subtitle6{
+	font-size: 1.4rem;
+    border-bottom: 2px dashed #000;
+    margin-bottom: 10px;
+    line-height: 1;
+    padding-bottom: 10px;
+}
+
+.page-subtitle7{
+	font-size: 1.6rem;
+    color: #5A534A;
+    line-height: 3;
+    text-align: left;
+    background: url(img/hatena.png);
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    height: 60px;
+}
+
+/* 各セクション　文章 */
+.p_normal-otherpage{
+    line-height: 2;
+    font-weight: normal;
+	text-align: left;
+}
+
+.p_normal-otherpage2{
+	line-height: 1.5;
+}
+
+.p_normal-otherpage3{
+	line-height: 1.3;
+	text-align: left;
+}
+
+/* 各セクション　画像 */
+.img_normal-otherpage{
+	margin: 50px auto;
+}
+
+.img_normal-otherpage2{
+	margin: 10px 0 20px;
+    width: 100%;
+}
+
+/* その他 */
+.search{
+	text-align: left;
+	position: relative;
+	padding-left: 35px;
+}
+
+.search::before {
+    content: '';
+    background-image: url(img/search_icon_br.svg);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mappin{
+	text-align: left;
+	position: relative;
+	padding-left: 35px;
+	margin-top: 50px;
+}
+
+.mappin::before {
+    content: '';
+    background-image: url(img/mappin_icon.svg);
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.img_normal-otherpage2 img{
+    width: 100%;
+}
+
+/*アコーディオンメニュー*/
+.accordion-area{
+	margin-top: 50px;
+}
+
+.toggle {
+	display: none;
+}
+.Label {
+	display: block;
+    position: relative;
+    box-shadow: 1px 0 5px 0.5px #5a534a8c;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 100%;
+    padding: 1.2em 0 1.2em 30px;
+    background: #E8E8E8;
+}
+.Label::before{
+    position: absolute;
+    top: calc( 50% - 3.5px);
+    right: 40px;
+    content: "";
+    width: 32px;
+    height: 7px;
+    background: #2C363C;
+    transform: rotate(90deg);
+    transition: all 0.5s 0s ease;
+}
+
+.Label::after{
+    position: absolute;
+    top: calc( 50% - 3.5px);
+    right: 40px;
+    content: "";
+    width: 32px;
+    height: 7px;
+    background: #2C363C;
+}
+
+.Label,
+.content {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transform: translateZ(0);
+	transition: all 0.3s;
+}
+.content {
+	height: 0;
+	padding:0 20px;
+	overflow: hidden;
+    text-align: left;
+    width: 95%;
+	margin: 10px auto;
+}
+.toggle:checked + .Label + .content {
+	height: auto;
+	padding:20px ;
+	transition: all .3s;
+}
+.toggle:checked + .Label::before {
+    transform: rotate(180deg) !important;
+    transition: all 0.5s 0s ease;
+}
+
+.cont_middle_wrapper {
+    display: table;
+}
+
+/* ABOUT US ----------------------------------------------------------------- */
+#aboutus-02 .top_sec1_l_content_detail{ 
+	margin-top: 50px;
+}
+
+#aboutus-03 .col4_wrapper{ 
+	border-radius: 20px;
+	padding: 20px 20px 40px;
+	position: relative;
+    z-index: -2;
+}
+
+#aboutus-04 .col3_wrapper{ 
+	border-radius: 20px; 
+	padding: 20px 20px 40px; 
+}
+
+#aboutus-04 .p_normal-otherpage {
+    height: 200px;
+}
+
+#aboutus-05{
+	background-image: url("img/img-back-aboutus-05.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-top: 50px;
+}
+
+#aboutus-05 .page-subtitle{
+	color: #fff;
+    max-width: 1080px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#aboutus-06 .p_normal-otherpage{
+	width: 90%;
+	margin: 0 auto;
+}
+
+#aboutus-06 .col2_wrapper2{
+	margin-bottom: 100px;
+}
+
+#aboutus-08 .col2_contents{
+	background: #fff;
+    border-radius: 30px;
+    background-image: url(img/img_back_kamma.svg);
+    background-position: top left;
+    padding: 30px;
+    background-repeat: no-repeat;
+    width: 48%;
+    margin: 10px 1%;
+}
+
+#aboutus-08 .p_normal-otherpage{
+	margin-top: 30px;
+}
+
+/* PROFILE ----------------------------------------------------------------- */
+#profile-01 .p_normal-otherpage2{
+	text-align: center;
+	margin: 20px auto 50px;
+}
+
+#pupworld-profile{ 
+	margin-top: 100px;
+}
+
+ul.profile-layout{
+	border-top: 1px solid #707070;
+	font-size: 1.4rem;
+	text-align: left;
+}
+
+ul.profile-layout li{
+	display: block;
+    border-bottom: 1px solid #707070;
+}
+
+ul.profile-layout li dl{
+	display: flex;
+}
+
+ul.profile-layout li dl dt{
+	width: 25%;
+	line-height: 3.6rem;
+}
+
+ul.profile-layout li dl dd{
+	width: 75%;
+    line-height: 3.6rem;
+}
+
+ul.profile-layout li dl dd span{
+	width: 240px;
+    display: inline-block;
+}
+
+/* SCHOOL ----------------------------------------------------------------- */
+.tabBox {
+    display: block;
+    width: 100%;
+    margin: 30px auto;
+}
+.tabBox .tabList {
+    display: flex;
+    width: 100%;
+	justify-content: flex-start;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.tab {
+    display: block;
+    width: 19%;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+	margin: 10px 1% 10px 0;
+
+}
+#school-01 .tab label {
+    display: block;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #fff;
+    color: #EF8200;
+    padding: 10px;
+	border: 1px solid #EF8200;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+	transition: 0.8s ;
+}
+.tabRadio {
+    display: none;
+}
+#school-01 label:hover {
+    cursor: pointer;
+    opacity: 0.8;
+	background-color: #83C0DA;
+	border-color: #83C0DA;
+	color: #fff;
+}
+#school-01 .tabRadio:checked + label {
+    line-height: 1.8;
+    background-color: #EF8200;
+    font-weight: bold;
+}
+.tabContentList {
+    display: block;
+	margin: 50px auto 0;
+}
+.tabContentList .tabContent {
+    display: none;
+    text-align: left;
+    padding: 0;
+}
+#tab_1:checked ~ .tabContentList #content_1,
+#tab_2:checked ~ .tabContentList #content_2,
+#tab_3:checked ~ .tabContentList #content_3,
+#tab_4:checked ~ .tabContentList #content_4,
+#tab_5:checked ~ .tabContentList #content_5{
+    display:block;
+}
+#tab_1:checked ~ .tabList .tab #tab_label_1,
+#tab_2:checked ~ .tabList .tab #tab_label_2,
+#tab_3:checked ~ .tabList .tab #tab_label_3,
+#tab_4:checked ~ .tabList .tab #tab_label_4,
+#tab_5:checked ~ .tabList .tab #tab_label_5{
+    line-height: 1.8;
+    background-color: #EF8200;
+    font-weight: bold;
+	color: #fff;
+	transition: 0.8s ;
+}
+#tab_1:checked ~ .tabList .tab #tab_label_1:hover,
+#tab_2:checked ~ .tabList .tab #tab_label_2:hover,
+#tab_3:checked ~ .tabList .tab #tab_label_3:hover
+#tab_4:checked ~ .tabList .tab #tab_label_4:hover,
+#tab_5:checked ~ .tabList .tab #tab_label_5:hover{
+    cursor: auto;
+    opacity: 1;
+	background-color: #83C0DA;
+	border-color: #83C0DA;
+}
+
+.region-wrapper{
+	margin: 20px auto 50px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;	
+}
+
+.region-wrapper>a{
+    border: 1px solid #5A534A;
+    padding: 10px 0;
+    width: 15%;
+    margin: 5px 0.83%;
+    border-radius: 30px;
+    text-align: center;
+    color: #5A534A;
+    transition: 0.8s;
+}
+
+.region-wrapper>a:hover{
+    background: #5A534A;
+    color: #fff;
+}
+
+.school-list-wrapper{
+	border: 3px solid #83C0DA;
+	display: flex;
+	padding: 20px;
+	width: 100%;
+	margin: 10px 0;
+	flex-wrap: wrap;
+	border-radius: 20px;
+}
+
+.school-list-wrapper .school-name{
+	width: 19%;
+    color: #EF8200;
+    line-height: 1.5;
+    margin-right: 1%;
+	font-size: 1.3rem;
+}
+
+.school-list-wrapper .school-info{
+	width: 60%;
+}
+
+.school-list-wrapper .school-more{
+	width: 20%;
+}
+
+.school-list-wrapper .school-more a{
+	width: auto;
+	text-align: center;
+}
+
+/* SCHOOL DETAIL ----------------------------------------------------------------- */
+.school-information-wrapper{
+	direction: block;
+	margin-bottom: 50px;
+}
+
+.school-information-wrapper li{
+	display: flex;
+	border-bottom: 1px dashed #ADADAD;
+	padding: 10px 0;
+	text-align: left;
+}
+
+.school-information-title{
+	width: 20%;
+}
+
+.school-information-contents{
+	width: 80%;
+}
+
+.school-map-wrapper{
+	width: 100%;
+	margin: 50px 0;
+	background-image: url("img/img-giraffe.svg");
+	background-position: bottom right;
+	background-size: auto;
+	background-repeat: no-repeat;
+}
+
+.school-map{
+	width: 50%;
+	margin: 0;
+	height: 600px;
+}
+
+.school-bus-wrapper{
+	border: 3px solid #EF8200;
+	border-radius: 20px;
+	padding: 35px;
+	text-align: left;
+	margin: 30px 0;
+}
+
+.school-footer-banner{
+	width: 100%;
+	text-align: center;
+	margin: 40px 0 0;
+}
+
+.school-footer-banner img{
+	width: 100%;
+}
+
+/* 無料体験申込 ----------------------------------------------------------------- */
+#entry-01 .top_sec6_content {
+    padding: 0 5vw;
+}
+
+#entry-02{
+	margin: 50px 0;
+}
+
+.schedule-layout{
+	display: table;
+    border-radius: 20px;
+    border: 3px solid #9FD4D5;
+    height: 300px;
+	width: 90%;
+    margin: 30px auto;
+}
+
+.schedule-layout>.col2_contents3-1{
+	border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border: 3px solid #9FD4D5;
+    display: table-cell;
+    vertical-align: middle;
+    color: #5A534A;
+}
+
+.schedule-layout>.col2_contents3-2{
+	display: table-cell;
+    vertical-align: middle;
+    padding: 10px 30px;
+    text-align: left;
+}
+
+.schedule-layout>.col2_contents3-1 li{
+	line-height: 57px;
+}
+
+.schedule-layout>.col2_contents3-2 li{
+	padding: 10px 20px;
+    height: 57px;
+    vertical-align: middle;
+    line-height: 1.2;
+}
+
+/* KINDY,ELEMENTARY,PRO,ONLIN COURSE  ----------------------------------------------------------------- */
+#kindy-01{
+	position: relative;
+    z-index: -2;
+}
+
+#elementary-01{
+	position: relative;
+    z-index: -2;
+}
+
+#elementary-02 .img-kids-bus-group{
+	margin-top: 0;
+}
+
+#specialist-01{
+	position: relative;
+    z-index: -2;
+}
+
+#online-01{
+	position: relative;
+    z-index: -2;
+}
+
+.coursepage-title-wrapper{
+    background: #5A534A;
+    padding: 30px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: -2;
+}
+
+.coursepage-title-wrapper .coursepage-title-age{
+	font-size: 2vw;
+    line-height: 1.2;
+}
+
+.coursepage-title-wrapper .coursepage-title-copy{
+	font-size: 3.3vw;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.course-title-wrapper{
+	display: table;
+    height: 100px;
+    margin: 80px auto 30px 0;
+}
+
+.course-title-wrapper .num{
+	display: tablecell;
+    width: 100px;
+	height: 100px;
+	line-height: 1;
+}
+
+.course-title-wrapper .course-title{
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+    font-size: 1.3rem;
+    line-height: 1.3;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.schedule-area-wrapper{
+	background: #fff;
+	border: 3px solid #EF8200;
+	padding: 3vw;
+	border-radius: 30px;
+}
+
+.col2_contents4-2.cont-schedule{
+	text-align: left;
+    padding-left: 30px;
+}
+
+#kindy-05{
+    color: #fff;
+}
+
+#kindy-05 .page-subtitle{
+	margin: 0 0 30px;
+}
+
+.price-area-wrapper{
+    background: #fff;
+    border: 3px solid #EF8200;
+    padding: 1vw 2vw;
+    border-radius: 20px;
+    text-align: left;
+    color: #000;
+    width: 98%;
+    margin: 0 auto;
+}
+
+/* 成長の様子  ----------------------------------------------------------------- */
+.achivement-01{
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 2% 5%;
+    max-width: 930px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+}
+
+.achivement-02{
+    background: #F5F5F5;
+    border-radius: 30px;
+    padding: 2% 5%;
+    max-width: 930px;
+    margin: 50px auto;
+	display: flex;
+	flex-direction: row-reverse;
+    flex-wrap: wrap;
+}
+
+	
+/* お知らせ一覧・NEWS・開校情報・シーズナルイベント・コラム　archive  ----------------------------------------------------------------- */
+.topics-category-wrapper{
+	display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    align-items: flex-end;
+}
+
+.topics-category-wrapper>a{
+    display: block;
+    line-height: 1.4;
+    text-align: center;
+    background-color: #fff;
+    color: #EF8200;
+    padding: 10px;
+    border: 1px solid #EF8200;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    transition: 0.8s;
+	width: 23%;
+}
+
+.topics-category-wrapper>a.cat-active{
+    line-height: 2.5;
+    background-color: #EF8200;
+    font-weight: bold;
+    color: #fff;
+    transition: 0.8s;
+}
+
+.topics-category-wrapper>a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+	background-color: #83C0DA;
+	border-color: #83C0DA;
+	color: #fff;
+}
+
+.archive-wrapper{ 
+	display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.archive-wrapper figure{
+    width: 33%;
+}
+
+.archive-wrapper figure .thumnail-area{ 
+	width: 90%; 
+    aspect-ratio: 3 / 2;
+	margin: 0 auto; 
+	display: block; 
+	background-position: center center;
+	background-size: cover;
+}
+
+.page-numbers.current{
+	background: #EF8200;
+	transition: 0.8s;
+	border: 5px solid #EF8200 !important;
+}
+
+.page-numbers{
+	border: 1px solid #5A534A;
+    padding: 10px 17px;
+    border-radius: 10px;
+	transition: 0.8s;
+}
+
+.page-numbers:hover{
+	background: #83C0DA;
+}
+
+
+/* お知らせ一覧・NEWS・開校情報・シーズナルイベント・コラム　single  ----------------------------------------------------------------- */
+#post-01 .cattime-wrapper{
+	
+
+    max-width: 300px;
+}
+
+#post-01 .cattime-wrapper .cat_area, .time_area{
+	width: calc( 50% - 25px);
+    margin-right: 10px;
+}
+
+.page-subtitle.post-footer{
+	margin: 0 auto 60px;
+    text-align: center;
+}
+
+.page-subtitle.post-footer::before{
+    left: calc( 50% - 2rem);
+}
+
+.sns-area-wrapper{
+	width: 100%;
+	margin: 100px auto;
+	max-width: 280px;
+}
+
+.sns-area-title{
+	font-weight: normal;
+	text-align: center;
+	position: relative;
+	line-height: 1;
+    margin-bottom: 20px;
+}
+
+.sns-area-title::before{
+	content: '';
+	position: absolute;
+	transform: rotate(135deg);
+	top: 0;
+	right: 0;
+    width: 30px;
+    border: 0;
+    border-top: 2px solid #5A534A;
+    margin: 0;
+    padding: 0;
+}
+
+.sns-area-title::after{
+	content: '';
+	position: absolute;
+	transform: rotate(45deg);
+	top: 0;
+	left: 0;
+    width: 30px;
+    border: 0;
+    border-top: 2px solid #5A534A;
+    margin: 0;
+    padding: 0;
+}
+
+.sns-area{
+	width: 100%;
+	max-width: 280px;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-around;
+}
+
+/* ----------------------------------------------------------------- */
+.trial-banner-wrapper { 
+	display:none;
+	line-height: 2;
+}
+
+.postid-1637 .trial-banner-wrapper,
+.postid-1658 .trial-banner-wrapper,
+.postid-1678 .trial-banner-wrapper,
+.postid-1586 .trial-banner-wrapper,
+.postid-1819 .trial-banner-wrapper,
+.postid-1825 .trial-banner-wrapper,
+.postid-1832 .trial-banner-wrapper,
+.postid-1836 .trial-banner-wrapper,
+.postid-1884 .trial-banner-wrapper,
+.postid-1875 .trial-banner-wrapper,
+.postid-1881 .trial-banner-wrapper,
+.postid-2019 .trial-banner-wrapper,
+.postid-1947 .trial-banner-wrapper,
+.postid-1986 .trial-banner-wrapper,
+.postid-1942 .trial-banner-wrapper,
+.postid-2040 .trial-banner-wrapper,
+.postid-2071 .trial-banner-wrapper,
+.postid-2047 .trial-banner-wrapper,
+.postid-2065 .trial-banner-wrapper,
+.postid-2124 .trial-banner-wrapper,
+.postid-2161 .trial-banner-wrapper,
+.postid-2164 .trial-banner-wrapper,
+.postid-2071 .trial-banner-wrapper
+ { 
+	display:block;
+	width: 100%;
+	margin: 60px auto 0;
+	max-width: 449px;
+}
+
+.trial-session-banner-2023 {
+	width: 100%;
+	max-width: 449px;
+	margin: 0 auto;
+}
+.trial-session-banner-2023-copy {
+	position: relative;
+	color: #EF8200;
+	font-size: 1.4rem;
+	font-weight: bold;
+	letter-spacing: 1px;
+	line-height: 0;
+}
+.trial-session-banner-2023-copy::before{
+	content: '';
+	position: absolute;
+	transform: rotate(135deg);
+	top: 0;
+	right: 0;
+    width: 30px;
+    border: 0;
+    border-top: 2px solid #EF8200;
+    margin: 0;
+    padding: 0;
+}
+
+.trial-session-banner-2023-copy::after{
+	content: '';
+	position: absolute;
+	transform: rotate(45deg);
+	top: 0;
+	left: 0;
+    width: 30px;
+    border: 0;
+    border-top: 2px solid #EF8200;
+    margin: 0;
+    padding: 0;
+}
+.trial-session-banner-2023 img {
+	width: 100%;
+}
+/* FOOTER ----------------------------------------------------------------- */
+.post-contents{
+	margin: 50px auto;
+}
+
+.post-contets-wrapper{
+	font-weight: normal;
+	line-height: 2;
+	text-align: left;
+}
+
+/* FOOTER ----------------------------------------------------------------- */
+#cta-footer .page-contents-inner {
+    border-radius: 40px;
+    padding: 20px;
+}
+#cta-footer .cta-footer-title-wrapper{
+	margin: 0 auto 0 30px;
+    background-image: url(img/img_back_telephonbox.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: contain;
+	padding: 20px 0 20px 85px;
+}
+
+#cta-footer .col3_contents{
+	background: #fff;
+	border-radius: 20px;
+	padding: 1% 2% 2%;
+    width: 33%;
+}
+#cta-footer .p_normal-otherpage{
+	height: 200px;
+}
+
+/* ============================== タブレット対応 ============================== */
+@media (max-width: 1080px) {
+/* 下層ページ共通 ----------------------------------------------------------------- */
+
+.page-contents-inner{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.btn_normal {
+    padding: 20px 0;
+}
+/* 各セクション　文章 */
+.page-subtitle2{
+	font-size: 1.3rem;
+    line-height: 3;
+}
+
+.page-subtitle7{
+    line-height: 1.2;
+	margin-bottom: 10px;
+	padding-left: 50px;
+}
+
+#cta-footer .p_normal-otherpage{
+	height: 250px;
+}
+	
+/* ABOUT US ----------------------------------------------------------------- */
+#aboutus-04 .p_normal-otherpage {
+    height: 280px;
+}
+
+.achivement-01{
+	padding: 5%;
+}
+	
+.achivement-02{
+	padding: 5%;
+}
+/* お知らせ一覧・NEWS・開校情報・シーズナルイベント・コラム　archive  ----------------------------------------------------------------- */
+.archive-wrapper figure img{
+    height: 280px;
+}
+	
+	
+}
+
+/* ============================== スマホ対応 ============================== */
+@media (max-width: 767px) {
+/* 下層ページ共通 */
+/* ヘッダー */
+.title-page-header{
+	width: 100%;
+	display: flex;
+	height: auto;
+	margin-top: 68px;
+}
+
+.page-title-wrapper{
+    width: 50%;
+}
+
+.page-title{
+    font-size: 5.5vw;
+    padding-left: 20px;
+}
+	
+.page-title::before {
+	content: '';
+    top: 50%;
+    left: 13px;
+    width: 5.5vw;
+    height: 5.5vw;
+    z-index: -1;
+}
+
+.page-title2{
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+	
+.page-img-wrapper{
+    background-size: cover;
+    aspect-ratio: 3/2;
+    width: 50%;
+    background-position: center center;
+}
+
+/* 各セクション　横幅の設定 */
+.page-contents-inner{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+/* 各セクション　余白の設定 */
+.page-contents-section {
+    padding: 5vw 0;
+}
+
+/* 各セクション　タイトル */
+.page-subtitle{
+	font-size: 1.5rem;
+    line-height: 1.3;
+    margin: 0 0 40px;
+}
+
+.page-subtitle2 {
+    line-height: 2;
+}
+
+.page-subtitle3 {
+    font-size: 1.2rem;
+}
+.page-subtitle5 {
+	padding: 18px 0 18px 20px;
+}
+	
+.page-subtitle6{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+	line-height: 1.2;
+}
+	
+.page-subtitle7 {
+    font-size: 1.6rem;
+    color: #5A534A;
+    text-align: left;
+    padding-left: 60px;
+    height: 70px;
+    background-size: 45px;
+    line-height: 1.3;
+	margin-bottom: 10px;
+}
+	
+/* 各セクション　文章 */
+.p_normal-otherpage{
+    line-height: 2;
+    font-weight: normal;
+	text-align: left;
+}
+.p_normal-otherpage3{
+	font-weight: normal;
+	font-size: 14px;
+}
+	
+/* 各セクション　画像 */
+.img_normal-otherpage{
+	margin: 30px auto;
+}
+	
+/* その他 */
+.mappin::before {
+	top: 0;
+}
+
+/* アコーディオンメニュー */
+.Label{ padding: 1.2em 50px 1.2em 1.2em;}
+	
+.Label::before {
+    right: 20px;
+}
+
+.Label::after {
+    right: 20px;
+}
+.accordion-area {
+    margin-top: 30px;
+}
+
+.content {
+	width: 100%;
+}
+
+#aboutus-06 .accordion-area .p_normal-otherpage{
+	width: 100%;		
+}
+	
+/* ABOUT US ----------------------------------------------------------------- */
+#aboutus-02 .top_sec1_l_content_detail{ 
+	margin-top: 10px; 
+	margin-bottom: 0;
+}
+	
+#aboutus-03 .page-subtitle {
+	line-height: 1.5;
+    padding: 20px 0 15px;
+}
+	
+#aboutus-03 .page-subtitle2 {
+    font-size: 1.3rem;
+    line-height: 2;
+}
+
+#aboutus-03 .col4_wrapper{
+    padding-bottom: 20px;
+}
+
+#aboutus-04 .col3_wrapper{
+    padding-bottom: 20px;
+}
+
+#aboutus-04 .p_normal-otherpage{
+    height: auto;
+    margin-bottom: 20px;
+}
+#aboutus-05{
+	background-image: none;
+}
+	
+#aboutus-05 .page-subtitle{
+	background-image: url("img/img-back-aboutus-05.jpg");
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 150px;
+    line-height: 150px;
+    padding-left: 5%;
+	margin-bottom: 0;
+}
+	
+#aboutus-05 .page-subtitle::before {
+    bottom: 45px;
+}
+
+#aboutus-05 .page-contents-inner{
+	background: rgba( 43, 42, 41, 0.85);
+    margin: 0;
+    width: 100%;
+    padding: 20px 5%;
+}
+
+#aboutus-06 .col2_wrapper2 {
+    margin-bottom: 10px;
+}
+
+#aboutus-07 .col2_contents3-1 {
+    width: 70%;
+    margin: 0 auto;
+}
+
+#aboutus-07 .p_normal-otherpage{
+	margin-top: 30px;
+}
+	
+#aboutus-08 .col2_contents{
+	width: 100%;	
+}
+
+/* PROFILE ----------------------------------------------------------------- */
+#profile-01 .p_normal-otherpage2{    
+	margin: 20px auto;
+}
+	
+#kidsup-profile{ 
+	margin-top: 50px;
+}
+
+#kidsup-profile img, #pupworld-profile img{
+	width: 70%;
+	margin: 0 auto;
+}
+	
+#pupworld-profile{ 
+	margin-top: 50px;
+}
+
+ul.profile-layout{
+	font-size: 1rem;
+}
+
+ul.profile-layout li dl dt{
+	line-height: 2.6rem;
+}
+
+ul.profile-layout li dl dd{
+    line-height: 2.6rem;
+}
+
+ul.profile-layout li dl dd span{
+	width: 60%;
+}
+
+/* SCHOOL ----------------------------------------------------------------- */
+.tab {
+    display: block;
+    width: 30%;
+	margin: 5px 1.5%;
+}
+
+.region-wrapper>a{
+	width: 30%;
+    margin: 5px 1.5%;
+}
+	
+.school-list-wrapper{
+	display: block;	
+}
+	
+.school-list-wrapper .school-name{
+	width: 100%;
+	text-align: center;
+	margin: 0 auto 20px;
+}
+
+.school-list-wrapper .school-info{
+	width: 100%;
+}
+
+.school-list-wrapper .school-more{
+	width: 100%;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.school-list-wrapper .school-more a{
+    width: 90%;
+    padding: 10px 18px;
+    font-size: 1.4rem;
+}
+	
+/* SCHOOL DETAIL ----------------------------------------------------------------- */
+#schooldetail-01 {
+    background-image: url(img/img-giraffe.svg);
+    background-position: top right;
+    background-size: 20%;
+    background-repeat: no-repeat;
+}
+.school-information-wrapper {
+    margin-top: 100px;
+}
+
+.school-information-title {
+    width: 30%;
+}
+
+.school-information-contents {
+    width: 70%;
+}
+
+.school-map {
+    width: 100%;
+    height: 50vh;
+}
+
+.school-bus-wrapper {
+    text-align: center;
+}
+	
+.school-footer-banner img{
+	width: 100%;
+}
+
+.schedule-layout>.col2_contents3-1 {
+    width: 30%;
+}
+
+.schedule-layout>.col2_contents3-2 {
+    width: 70%;
+}
+
+.schedule-layout>.col2_contents3-2 li {
+    padding: 10px;
+    height: 57px;
+    line-height: 1.2;
+}
+	
+/* 無料体験申込 ----------------------------------------------------------------- */
+#entry-01 .top_sec6_content {
+    padding: 0;
+}
+
+/* KINDY,ELEMENTARY,PRO,ONLIN COURSE  ----------------------------------------------------------------- */
+.coursepage-title-wrapper {
+    padding: 15px 0;
+}
+
+.coursepage-title-wrapper .coursepage-title-age{
+	font-size: 3.2vw;
+}
+
+.coursepage-title-wrapper .coursepage-title-copy{
+	font-size: 5vw;
+}
+	
+#kindy-02 .col2_contents p{
+	margin-top: 20px;
+}
+
+.course-title-wrapper{
+	margin-top: 50px;
+}
+	
+.schedule-area-wrapper .col2_contents4-2.cont-schedule {
+    padding-left: 15px;
+}
+	
+.schedule-area-wrapper .p_normal-otherpage{
+	line-height: 1.3;
+}
+
+.price-area-wrapper {
+    padding: 20px;
+	margin: 0 auto 20px;
+}
+
+/* 成長の様子  ----------------------------------------------------------------- */
+.achivement-01{
+    padding: 7% 5%;
+}
+
+.achivement-02{
+    padding: 7% 5%;
+}
+
+/* お知らせ一覧・NEWS・開校情報・シーズナルイベント・コラム　archive  ----------------------------------------------------------------- */
+.topics-category-wrapper{
+	margin-bottom: 30px;
+}
+	
+.topics-category-wrapper>a{
+	width: 48%;
+	margin: 5px 0;
+}
+
+.archive-wrapper figure{
+	width: 100%;	
+}
+	
+/* footer ----------------------------------------------------------------- */
+#cta-footer .col3_contents{
+	padding: 5%;
+    width: 95%;
+	margin-bottom: 15px;
+}
+#cta-footer .cta-footer-title-wrapper{
+	margin: 0 auto 0 8px;
+    padding: 5px 0 20px 90px;
+    background-size: auto;
+}
+
+#cta-footer .page-contents-inner{
+	padding: 20px 2% 2px;
+}
+
+#cta-footer .p_normal-otherpage{
+	height: auto;
+	margin-bottom: 20px;
+}
+}
+
+/* ============================== スマホ対応 450px以下 ============================== */
+@media (max-width: 450px) {
+	
+/* SCHOOL DETAIL ----------------------------------------------------------------- */
+#schooldetail-01{
+	background-image: url("img/img-giraffe.svg");
+	background-position: top right;
+	background-size: 30%;
+	background-repeat: no-repeat;
+}
+
+.school-information-wrapper{
+	margin-top: 60px;
+}
+.trial-session-banner-2023-copy {
+	font-size: 1.1rem;
+	width: 90%;
+	margin:0 auto;
+	padding-bottom:5px;
+	line-height:1.5;
+}
+.trial-session-banner-2023-copy::before{
+	top: 16px;
+}
+
+.trial-session-banner-2023-copy::after{
+	top: 16px;
+}
+
+.trial-session-banner-2023 img {
+	width: 90%;
+	margin:0 auto;
+}
+
+}
